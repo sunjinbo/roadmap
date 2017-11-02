@@ -1,0 +1,87 @@
+/*
+* ============================================================================
+*  Name        : roadmap.hrh
+*  Part of     : RoadMap
+*  Description : 
+*  Version     : 
+*
+*  Copyright © 2007 Nokia.  All rights reserved.
+*  This material, including documentation and any related computer
+*  programs, is protected by copyright controlled by Nokia.  All
+*  rights are reserved.  Copying, including reproducing, storing,
+*  adapting or translating, any or all of this material requires the
+*  prior written consent of Nokia.  This material also contains
+*  confidential information which may not be disclosed to others
+*  without the prior written consent of Nokia.
+* ============================================================================
+* 
+*/
+
+#ifndef ROADMAP_HRH
+#define ROADMAP_HRH
+
+// ENUMERATES
+// ---------------------------------------------------------
+// TMainMenuID
+// This resource should be empty.
+// ---------------------------------------------------------
+//
+enum TMainMenuID
+    {
+    // start value must not be 0
+    EMainMenuAdd = 0x00000010, 
+    EMainMenuRemove,
+    EMainMenuEdit
+    };
+
+// ---------------------------------------------------------
+// TEditFormControlsID
+// This resource should be empty.
+// ---------------------------------------------------------
+//
+enum TMainViewControlsID
+    {
+    EMainViewLabelInputID = 0,
+    EMainViewEdwinInputID,
+    EMainViewListBoxID,
+    EMainViewEdwinDescriptionID,
+    EMainViewTotalNumber
+};
+
+// ---------------------------------------------------------
+// TEditFormControlsID
+// This resource should be empty.
+// ---------------------------------------------------------
+//
+enum TEditFormControlsID
+    {
+    // start value must not be 0
+    EEditFormCodeEdwinID = 0x00000050,
+    EEditFormNameEdwinID
+    };
+
+// ---------------------------------------------------------
+// TIndexType
+// Define some common index value
+// ---------------------------------------------------------
+//
+enum TIndexType
+    {
+    EInvaildIndex = -1,
+    EFirstIndex
+    };
+
+// ---------------------------------------------------------
+// TFieldMaxChars
+// Specifies the maximum characters for a field
+// ---------------------------------------------------------
+//
+enum TFieldMaxChars
+    {
+    ECodeMaxChars = 5,
+    ENameMaxChars = 30
+    };
+
+#endif // ROADMAP_HRH
+
+// End of File

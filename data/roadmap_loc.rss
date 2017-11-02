@@ -1,0 +1,42 @@
+/*
+* ============================================================================
+*  Name        : roadmap_loc.rss
+*  Part of     : RoadMap
+*  Description : 
+*  Version     : 
+*
+*  Copyright © 2007 Nokia.  All rights reserved.
+*  This material, including documentation and any related computer
+*  programs, is protected by copyright controlled by Nokia.  All
+*  rights are reserved.  Copying, including reproducing, storing,
+*  adapting or translating, any or all of this material requires the
+*  prior written consent of Nokia.  This material also contains
+*  confidential information which may not be disclosed to others
+*  without the prior written consent of Nokia.
+* ============================================================================
+* 
+*/
+
+// INCLUDES
+#include <appinfo.rh>
+
+#include "roadmap_loc.rls"
+
+// ---------------------------------------------------------  
+// LOCALISABLE_APP_INFO
+// ---------------------------------------------------------
+//
+RESOURCE LOCALISABLE_APP_INFO
+	{
+	short_caption = STRING_r_RoadMap_caption;
+	caption_and_icon =
+		{
+		CAPTION_AND_ICON_INFO 
+			{
+			caption = STRING_r_RoadMap_title;
+			icon_file = "\\resource\\apps\\RoadMapicon.mbm";
+			}
+		};
+	}
+
+// End of File

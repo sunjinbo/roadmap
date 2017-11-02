@@ -1,0 +1,214 @@
+/*
+* ============================================================================
+*  Name        : roadmap.rss
+*  Part of     : RoadMap
+*  Description : 
+*  Version     : %version:%
+*
+*  Copyright © 2007-? Nokia.  All rights reserved.
+*  This material, including documentation and any related computer
+*  programs, is protected by copyright controlled by Nokia.  All
+*  rights are reserved.  Copying, including reproducing, storing,
+*  adapting or translating, any or all of this material requires the
+*  prior written consent of Nokia.  This material also contains
+*  confidential information which may not be disclosed to others
+*  without the prior written consent of Nokia.
+* ============================================================================
+* 
+*/
+
+NAME HELL
+
+// INLCUDES
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+
+#include "roadmap.hrh"
+#include "roadmap_loc.rls"
+
+// ---------------------------------------------------------
+// Define the resource file signature 
+// This resource should be empty.
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+// r_default_document_name
+// Default Document Name
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+// EIK_APP_INFO
+// Define default menu and CBA key.
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_RoadMap_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_menubar
+// RoadMap's main menu
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_RoadMap_menubar
+    {
+    titles =
+        {
+        MENU_TITLE { menu_pane = r_RoadMap_menu; }
+        };
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_menu
+// Define menu item for the RoadMap's main menu
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_RoadMap_menu
+    {
+    items = 
+        {
+        MENU_ITEM { command = EMainMenuAdd;
+            txt = STRING_r_menu_Add; },
+        MENU_ITEM { command = EMainMenuRemove;
+            txt = STRING_r_menu_Remove; },
+        MENU_ITEM {command = EMainMenuEdit;
+            txt = STRING_r_menu_Edit;},
+        MENU_ITEM {command = EAknSoftkeyExit;
+            txt = STRING_r_menu_Exit;}
+        };
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_data_filename
+// Define the text of Default File Name
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_data_filename 
+    {
+    buf = STRING_r_data_filename;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_label_input
+// Define the text of Label Input
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_label_input 
+    {
+    buf = STRING_r_label_Input; 
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_label_code
+// Define the text of Label Code
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_label_code
+    {
+    buf = STRING_r_label_Code;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_label_name
+// Define the text of Label Name
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_label_name
+    {
+    buf = STRING_r_label_Name; 
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_warning_exist
+// Define the warning1's text
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_warning_exist
+    {
+    buf = STRING_r_warning_exist;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_warning_format
+// Define the warning2's text
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_warning_format
+    {
+    buf = STRING_r_warning_format;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_warning_lose
+// Define the warning3's text
+// ---------------------------------------------------------
+//
+RESOURCE TBUF32 r_RoadMap_warning_lose
+    {
+    buf = STRING_r_warning_lose;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_editdialog
+// Define Editform Dialog, including an Editform Form
+// ---------------------------------------------------------
+//
+RESOURCE DIALOG r_RoadMap_dlg_editdialog
+    {
+    flags = EEikDialogFlagNoDrag | 
+            EEikDialogFlagFillAppClientRect |
+            EEikDialogFlagNoTitleBar |
+            EEikDialogFlagWait |
+            EEikDialogFlagCbaButtons;
+    buttons = R_AVKON_SOFTKEYS_OK_CANCEL;
+    form = r_RoadMap_form_editform;
+    }
+
+// ---------------------------------------------------------  
+// r_RoadMap_form_editform
+// Define Editform Form
+// ---------------------------------------------------------
+//
+RESOURCE FORM r_RoadMap_form_editform
+    {
+    flags = EEikFormEditModeOnly;
+    items = 
+        {
+        DLG_LINE
+            {
+            id = EEditFormCodeEdwinID;
+            type = EEikCtEdwin;
+            prompt = STRING_r_label_Code;
+            control = EDWIN
+                {
+                allowed_input_modes = 
+                    EAknEditorNumericInputMode;
+                maxlength = 5;
+                lines = 1;
+                };
+            },
+        DLG_LINE
+            {
+            id = EEditFormNameEdwinID;
+            type = EEikCtEdwin;
+            prompt= STRING_r_label_Name;
+            control = EDWIN
+                {
+                allowed_input_modes = 
+                    EAknEditorAlphaInputMode;
+                maxlength = 30;
+                lines = 1;
+                };
+            }
+        };
+    }
+
+// End of File

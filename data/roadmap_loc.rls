@@ -1,0 +1,118 @@
+/*
+* ============================================================================
+*  Name        : roadmap_loc.rls
+*  Part of     : RoadMap
+*  Description : 
+*  Version     : 
+*
+*  Copyright © 2007 Nokia.  All rights reserved.
+*  This material, including documentation and any related computer
+*  programs, is protected by copyright controlled by Nokia.  All
+*  rights are reserved.  Copying, including reproducing, storing,
+*  adapting or translating, any or all of this material requires the
+*  prior written consent of Nokia.  This material also contains
+*  confidential information which may not be disclosed to others
+*  without the prior written consent of Nokia.
+* ============================================================================
+* 
+*/
+
+// ---------------------------------------------------------
+// STRING_short_caption
+// Define the caption of the RoadMap Application
+// ---------------------------------------------------------
+//
+rls_string STRING_r_RoadMap_caption "RoadMap"
+
+// ---------------------------------------------------------
+// STRING_r_RoadMap_caption
+// Define the title of the RoadMap Application
+// ---------------------------------------------------------
+//
+rls_string STRING_r_RoadMap_title "TE country directory"
+
+// ---------------------------------------------------------
+// STRING_r_data_filename
+// Define the text of Default File Name
+// ---------------------------------------------------------
+//
+rls_string STRING_r_data_filename "countrydata.dat"
+
+// ---------------------------------------------------------
+// STRING_r_label_Input
+// Define the text of Label Input
+// ---------------------------------------------------------
+//
+rls_string STRING_r_label_Input "Input"
+
+// ---------------------------------------------------------
+// STRING_r_label_Code
+// Define the text of Label Code
+// ---------------------------------------------------------
+//
+rls_string STRING_r_label_Code "Code"
+
+// ---------------------------------------------------------
+// STRING_r_label_Name
+// Define the text of Label Name
+// ---------------------------------------------------------
+//
+rls_string STRING_r_label_Name "Name"
+
+// ---------------------------------------------------------
+// STRING_r_menu_Add
+// Define the text of main menu's items
+// ---------------------------------------------------------
+//
+rls_string STRING_r_menu_Add "Add"
+
+// ---------------------------------------------------------
+// STRING_r_menu_Remove
+// Define the text of main menu's items
+// ---------------------------------------------------------
+//
+rls_string STRING_r_menu_Remove "Remove"
+
+// ---------------------------------------------------------
+// STRING_r_menu_Edit
+// Define the text of main menu's items
+// ---------------------------------------------------------
+//
+rls_string STRING_r_menu_Edit "Edit"
+
+// ---------------------------------------------------------
+// STRING_r_menu_Exit
+// Define the text of main menu's items
+// ---------------------------------------------------------
+//
+rls_string STRING_r_menu_Exit "Exit"
+
+// ---------------------------------------------------------
+// STRING_r_menu_Ok
+// Define the text of main menu's items
+// ---------------------------------------------------------
+//
+rls_string STRING_r_menu_Ok "Ok"
+
+// ---------------------------------------------------------
+// STRING_r_warning_exist
+// Define the text of warning 1
+// ---------------------------------------------------------
+//
+rls_string STRING_r_warning_exist "This code was already exist!"
+
+// ---------------------------------------------------------
+// STRING_r_warning_format
+// Define the text of warning 2
+// ---------------------------------------------------------
+//
+rls_string STRING_r_warning_format "The format is not correct!"
+
+// ---------------------------------------------------------
+// STRING_r_warning_empty
+// Define the text of warning 3
+// ---------------------------------------------------------
+//
+rls_string STRING_r_warning_lose "The input fields were empty!"
+
+// End of File

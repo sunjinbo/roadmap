@@ -1,0 +1,68 @@
+/*
+* ============================================================================
+*  Name        : roadmap.mmp
+*  Part of     : RoadMap
+*  Description : Project definition file for project RoadMap Application
+*  Version     : 
+*
+*  Copyright © 2007 Nokia.  All rights reserved.
+*  This material, including documentation and any related computer
+*  programs, is protected by copyright controlled by Nokia.  All
+*  rights are reserved.  Copying, including reproducing, storing,
+*  adapting or translating, any or all of this material requires the
+*  prior written consent of Nokia.  This material also contains
+*  confidential information which may not be disclosed to others
+*  without the prior written consent of Nokia.
+* ============================================================================
+* 
+*/
+
+TARGET                  roadmap.exe
+TARGETTYPE              exe
+UID                     0x100039CE 0x0CD41FC8
+
+CAPABILITY              None
+
+SOURCEPATH              ..\src
+SOURCE                  roadmap.cpp
+SOURCE                  roadmapapplication.cpp 
+SOURCE                  roadmapappview.cpp
+SOURCE                  roadmapappui.cpp
+SOURCE                  roadmapdocument.cpp
+SOURCE                  countrydatamanager.cpp
+SOURCE                  roadmapeditform.cpp
+SOURCE                  countrydata.cpp
+
+SOURCEPATH              ..\data
+START RESOURCE          roadmap.rss
+HEADER
+TARGETPATH              \resource\apps
+end
+
+START RESOURCE          roadmap_reg.rss
+TARGETPATH              \private\10003a3f\import\apps
+END
+
+START RESOURCE          roadmap_loc.rss
+TARGETPATH              \resource\apps
+END
+
+USERINCLUDE             ..\inc
+
+SYSTEMINCLUDE           \epoc32\include
+
+LIBRARY                 euser.lib
+LIBRARY                 apparc.lib
+LIBRARY                 cone.lib 
+LIBRARY                 eikcore.lib  
+LIBRARY                 avkon.lib  
+LIBRARY                 commonengine.lib
+LIBRARY                 eikcoctl.lib
+LIBRARY                 egul.lib
+LIBRARY                 bafl.lib
+LIBRARY                 eikctl.lib
+LIBRARY                 efsrv.lib
+LIBRARY                 estor.lib
+LIBRARY                 eikdlg.lib
+
+// End of File
